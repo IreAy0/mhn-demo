@@ -5,7 +5,7 @@
 @tailwind components;
 
 body{
-  @apply font-dmSans;
+  @apply font-dmSans antialiased;
 }
 
 
