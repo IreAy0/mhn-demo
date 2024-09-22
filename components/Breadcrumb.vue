@@ -1,5 +1,5 @@
 <template>
-  <nav aria-label="Breadcrumb" class="flex">
+  <nav aria-label="Breadcrumb" class="flex px-2">
     <ol class="flex items-center space-x-2">
      <li class="inline-flex items-center">
         <NuxtLink to="/" class="text-gray-700 hover:text-gray-900 inline-flex items-center">
@@ -14,8 +14,8 @@
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 12L10 8L6 4" stroke="#D0D5DD" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>            
-          <NuxtLink v-if="item.href" :to="item.href" class="text-gray-700 hover:text-gray-900 ml-1 md:ml-2 text-sm font-normal">{{ item.text }}</NuxtLink>
-          <span v-else class="text-body ml-1 md:ml-2 text-sm font-normal">{{ item.text }}</span>
+          <NuxtLink v-if="item.href" :to="item.href" class="text-[#667085]  ml-1 md:ml-2 text-sm font-normal">{{ item.text }}</NuxtLink>
+          <span v-else class="text-[#667085] ml-1 md:ml-2 text-sm font-normal">{{ item.text }}</span>
         </div>
       </li>
     </ol>

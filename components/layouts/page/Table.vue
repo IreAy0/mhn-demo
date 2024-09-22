@@ -1,13 +1,13 @@
 <template>
   <div class=" ">
     <!-- Tabs -->
-    <div class="flex gap-2 ">
+    <div class="flex gap-1 ">
       <button
         class="px-12 py-4 rounded-t-xl text-[#088AD8] text-base font-medium bg-[#F2F4F7] "
       >
         Prescription Order
       </button>
-      <button class="px-12 py-4 rounded-t-xl text-gray-500  bg-[#F2F4F7]">
+      <button class="px-12 py-4 rounded-t-xl text-[#667085]  bg-[#F2F4F7]">
         Dispensed
       </button>
     </div>
@@ -30,11 +30,13 @@
         />
       </div>
     
-      <button class="px-4 w-[99px] py-2 flex items-center text-base font-normal text-[#3F434A] justify-center gap-1.5 border rounded-lg"> 
+      <button class="px-4 w-[99px] py-2.5 flex items-center text-base font-normal justify-center gap-1.5 border rounded-lg"> 
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M11.6672 20C11.4869 20 11.3115 19.9415 11.1672 19.8333L7.83389 17.3333C7.73039 17.2557 7.64639 17.1551 7.58853 17.0393C7.53067 16.9236 7.50055 16.796 7.50055 16.6667V11.9833L1.65389 5.40583C1.23865 4.9374 0.967536 4.35901 0.87312 3.7402C0.778704 3.12138 0.865007 2.48846 1.12166 1.91751C1.37831 1.34656 1.79438 0.861882 2.31987 0.521721C2.84536 0.181561 3.45791 0.000395349 4.08389 0L15.9172 0C16.5431 0.000734209 17.1555 0.182199 17.6808 0.522589C18.2061 0.862978 18.6219 1.34781 18.8783 1.91882C19.1347 2.48983 19.2207 3.12273 19.126 3.74146C19.0314 4.36018 18.7601 4.93841 18.3447 5.40667L12.5006 11.9833V19.1667C12.5006 19.3877 12.4128 19.5996 12.2565 19.7559C12.1002 19.9122 11.8882 20 11.6672 20ZM9.16722 16.25L10.8339 17.5V11.6667C10.8341 11.4626 10.9091 11.2657 11.0447 11.1133L17.1014 4.29917C17.3033 4.0709 17.4351 3.7892 17.4809 3.48788C17.5267 3.18655 17.4846 2.87842 17.3595 2.60046C17.2345 2.32251 17.0319 2.08655 16.7761 1.92091C16.5202 1.75527 16.222 1.66699 15.9172 1.66667H4.08389C3.77926 1.66713 3.48124 1.75546 3.22556 1.92105C2.96988 2.08665 2.76739 2.3225 2.64239 2.60029C2.51739 2.87809 2.47518 3.18605 2.52083 3.48723C2.56647 3.78842 2.69803 4.07004 2.89972 4.29833L8.95722 11.1133C9.09257 11.2659 9.16728 11.4627 9.16722 11.6667V16.25Z" fill="#667085"/>
           </svg>           
+       <span class="">
         Filter
+       </span>
       
       </button>
     </div>
@@ -45,18 +47,21 @@
     <thead class="">
       <tr>
         <th class="p-3 border-b">
-          <input type="checkbox" @change="toggleAll" v-model="selectAll" />
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" name="checked-demo" class="form-tick appearance-none bg-white bg-check h-5 w-5 border border-gray-300 rounded-md checked:bg-[#088AD8] checked:border-transparent focus:outline-none"/>
+               
+            </label>
         </th>
-        <th class="p-3 border-b text-xs text-[#667085] font-medium">Date</th>
-        <th class="p-3 border-b text-xs text-[#667085] font-medium">Order ID</th>
-        <th class="p-3 border-b text-xs text-[#667085] font-medium">Patient Name</th>
-        <th class="p-3 border-b text-xs text-[#667085] font-medium">Medications</th>
-        <th class="p-3 border-b text-xs text-[#667085] font-medium">Admission Status</th>
-        <th class="p-3 border-b text-xs text-[#667085] font-medium">Requested By</th>
-        <th class="p-3 border-b text-xs text-[#667085] font-medium">Dispensed by</th>
-        <th class="p-3 border-b text-xs text-[#667085] font-medium">Fee Status</th>
-        <th class="p-3 border-b text-xs text-[#667085] font-medium">Service</th>
-        <th class="p-3 border-b text-xs text-[#667085] font-medium">Actions</th>
+        <th class="p-3 border-b text-xs text-[#667085] font-medium font-Inter">Date</th>
+        <th class="p-3 border-b text-xs text-center text-[#667085] font-Inter font-medium">Order ID</th>
+        <th class="p-3 border-b text-xs text-center text-[#667085] font-Inter font-medium">Patient Name</th>
+        <th class="p-3 border-b text-xs text-center text-[#667085] font-Inter font-medium">Medications</th>
+        <th class="p-3 border-b text-xs text-center text-[#667085] font-Inter font-medium">Admission Status</th>
+        <th class="p-3 border-b text-xs text-center text-[#667085] font-Inter font-medium">Requested By</th>
+        <th class="p-3 border-b text-xs text-center text-[#667085] font-Inter font-medium">Dispensed by</th>
+        <th class="p-3 border-b text-xs text-center text-[#667085] font-Inter font-medium">Fee Status</th>
+        <th class="p-3 border-b text-xs text-center text-[#667085] font-Inter font-medium">Service</th>
+        <th class="p-3 border-b text-xs text-center text-[#667085] font-Inter font-medium">Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -66,20 +71,24 @@
         class="text-sm"
       >
         <td class="p-3 border-b">
-          <input type="checkbox" v-model="selected[index]" />
+          <label class="flex items-center space-x-3">
+            <input type="checkbox" name="checked-demo" class="form-tick appearance-none bg-white bg-check h-5 w-5 border border-gray-300 rounded-md checked:bg-[#088AD8] checked:border-transparent focus:outline-none"/>
+               
+            </label>
+          <!-- <input type="checkbox" v-model="selected[index]" /> -->
         </td>
         <td class="p-3 border-b">
           <p class="text-sm text-header5">{{ item.date }} </p> 
         <p class="text-sm text-header">{{item.time}}</p>
         </td>
-        <td class="p-3 border-b text-[#3F434A]">{{ item.orderId }}</td>
-        <td class="p-3 border-b text-[#3F434A]">{{ item.patientName }}</td>
-        <td class="p-3 border-b">
+        <td class="p-3 border-b text-[#3F434A] text-center text-sm">{{ item.orderId }}</td>
+        <td class="p-3 border-b text-[#3F434A] text-center text-sm">{{ item.patientName }}</td>
+        <td class="p-3 border-b text-sm text-center">
           <a href="#" class="text-primary underline">{{ item.medications }}</a>
         </td>
-        <td class="p-3 border-b">
+        <td class="p-3 border-b text-center">
           <span
-            class="px-2 py-1 text-xs font-semibold rounded-full"
+            class="px-2 py-1 text-sm font-normal rounded-full"
             :class="item.admissionStatus === 'Admitted'
               ? 'bg-green-100 text-green-600'
               : ''"
@@ -87,11 +96,11 @@
             {{ item.admissionStatus }}
           </span>
         </td>
-        <td class="p-3 border-b text-[#3F434A]">{{ item.requestedBy }}</td>
-        <td class="p-3 border-b">-</td>
-        <td class="p-3 border-b">
+        <td class="p-3 border-b text-center text-[#3F434A] text-sm">{{ item.requestedBy }}</td>
+        <td class="p-3 border-b text-center">-</td>
+        <td class="p-3 border-b text-center">
           <span
-            class="px-2 py-1 text-xs font-semibold rounded-full"
+            class="px-2 py-1 text-sm font-normal rounded-full"
             :class="item.feeStatus === 'Paid'
               ? 'bg-green-100 text-green-600'
               : 'bg-blue-100 text-blue-600'"
@@ -99,15 +108,19 @@
             {{ item.feeStatus }}
           </span>
         </td>
-        <td class="p-3 border-b">
+        <td class="p-3 border-b text-center">
           <span
-            class="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-600"
+            class="px-2 py-1 text-sm font-normal rounded-full bg-yellow-100 text-yellow-600"
           >
             {{ item.service }}
           </span>
         </td>
-        <td class="p-3 border-b">
-          <button class="text-gray-600">⋮</button>
+        <td class="p-3 border-b text-center">
+          <button class="text-gray-600 ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
+          </svg>
+          </button>
         </td>
       </tr>
     </tbody>
@@ -126,7 +139,7 @@ export default {
       tableData: [
         {
           time:'3:45 PM',
-          date: '04/06/2024 5:45 PM',
+          date: '04/06/2024 ',
           orderId: 'PRE001',
           patientName: 'Durosinmi Jolayemi',
           medications: 3,

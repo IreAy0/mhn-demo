@@ -10,7 +10,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-      dmSans: ['DM Sans', 'sans-serif']
+      dmSans: ['DM Sans', 'sans-serif'],
+      Inter: ['Inter' , 'sans-serif']
     },
     extend: {
       colors:{

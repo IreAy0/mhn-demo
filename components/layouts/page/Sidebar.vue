@@ -6,8 +6,8 @@
     <!-- SIDEBAR HEADER -->
     <div class="flex items-center justify-between px-10">
       <NuxtLink to="/">
-        <!-- <img src="@/assets/images/logo/logo.svg" alt="Logo" /> -->
-         <span class="text-2xl font-bold dark:text-boxdark">Logo</span>
+        <img src="@/assets/logo_small.png" alt="Logo" />
+         <!-- <span class="text-2xl font-bold dark:text-boxdark">Logo</span> -->
       </NuxtLink>
 
     </div>

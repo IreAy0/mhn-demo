@@ -1,6 +1,6 @@
 <template>
-  <div class="flex gap-2 flex-col mt-4">
-    <h1 class="text-[28px] text-header5 font-medium font-dmSans">
+  <div class="flex gap-1.5 flex-col ">
+    <h1 class="text-[36px] text-header5 font-semibold font-Inter">
     {{title}}
     </h1>
     <p class="text-header text-base font-normal">
